@@ -1,0 +1,130 @@
+2024-04-02 11:51:23,336 ERROR: Exception on / [GET] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 28, in index
+    return render_template("index.html", title='Home Page', form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\JERRY\Favorites\microblog\app\templates\index.html", line 19, in template
+    {% endif %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-04-02 11:55:54,406 ERROR: Exception on / [GET] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 28, in index
+    return render_template("index.html", title='Home Page', form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\JERRY\Favorites\microblog\app\templates\index.html", line 19, in template
+    {% endif %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-04-02 12:07:31,836 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:46]
+2024-04-02 14:12:54,407 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-02 14:13:26,744 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-02 14:13:57,767 ERROR: Exception on /reset_password_request [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 181, in reset_password_request
+    user = User.query.filter_by(email=form.email.email.data).first()
+                                      ^^^^^^^^^^^^^^^^
+AttributeError: 'StringField' object has no attribute 'email'
+2024-04-02 14:29:07,472 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-02 14:29:25,530 ERROR: Exception on /reset_password_request [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 183, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\JERRY\Favorites\microblog\app\email.py", line 13, in send_password_reset_email
+    token = user.get_reset_password_token()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\models.py", line 31, in get_reset_password_token
+    return jwt.encode(
+           ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2024-04-03 19:46:09,512 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]

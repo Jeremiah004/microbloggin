@@ -1,0 +1,126 @@
+2024-04-03 19:46:51,274 ERROR: Exception on /reset_password_request [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 183, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\JERRY\Favorites\microblog\app\email.py", line 13, in send_password_reset_email
+    token = user.get_reset_password_token()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\models.py", line 31, in get_reset_password_token
+    return jwt.encode(
+           ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2024-04-03 19:50:58,860 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-03 19:51:43,885 ERROR: Exception on /reset_password_request [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 183, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\JERRY\Favorites\microblog\app\email.py", line 13, in send_password_reset_email
+    token = user.get_reset_password_token()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\models.py", line 31, in get_reset_password_token
+    return jwt.encode(
+           ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2024-04-03 19:58:40,696 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-03 19:59:05,201 ERROR: Exception on /reset_password_request [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 861, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+                   ^^^^^^^^^^^
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 451, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 183, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\JERRY\Favorites\microblog\app\email.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "C:\Users\JERRY\Favorites\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 993, in quit
+    res = self.docmd("quit")
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 431, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Users\JERRY\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2024-04-03 21:40:51,629 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-03 21:42:28,674 ERROR: Error sending email: please run connect() first [in C:\Users\JERRY\Favorites\microblog\app\email.py:12]
+2024-04-03 21:43:35,768 ERROR: Error sending email: please run connect() first [in C:\Users\JERRY\Favorites\microblog\app\email.py:12]
+2024-04-03 21:45:34,482 ERROR: Error sending email: please run connect() first [in C:\Users\JERRY\Favorites\microblog\app\email.py:12]
+2024-04-03 21:45:38,287 ERROR: Exception on /login [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 83, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'check_password'. Did you mean: 'set_password'?

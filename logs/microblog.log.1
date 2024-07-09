@@ -1,0 +1,120 @@
+2024-04-03 21:45:46,638 ERROR: Exception on /login [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 83, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'check_password'. Did you mean: 'set_password'?
+2024-04-03 21:47:34,661 ERROR: Exception on /login [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 83, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'check_password'. Did you mean: 'set_password'?
+2024-04-03 21:47:43,182 ERROR: Exception on /login [POST] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 83, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'check_password'. Did you mean: 'set_password'?
+2024-04-03 22:05:19,453 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
+2024-04-03 22:07:48,827 ERROR: Error sending email: please run connect() first [in C:\Users\JERRY\Favorites\microblog\app\email.py:12]
+2024-04-03 22:48:06,378 ERROR: Exception on /user/big_jay [GET] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 102, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InstrumentedList' object has no attribute 'order_by'
+2024-04-03 22:49:42,222 ERROR: Exception on /user/Jeremiah [GET] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 102, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InstrumentedList' object has no attribute 'order_by'
+2024-04-03 22:55:27,391 ERROR: Exception on /user/Jeremiah [GET] [in C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JERRY\Favorites\microblog\app\routes.py", line 102, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InstrumentedList' object has no attribute 'order_by'
+2024-04-03 23:01:34,340 INFO: Microblog startup [in C:\Users\JERRY\Favorites\microblog\app\__init__.py:48]
